@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * max - Returns the maximum of two numbers
+ * maxValue - Returns the maximum of two numbers
  * @n1: first number
  * @n2: second number
  *
@@ -27,11 +27,13 @@ int maxValue(int n1, int n2)
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
+	int leftHeight, rightHeight;
+
 	if (tree == NULL)
 		return (0);
 
-	int leftHeight = binary_tree_height(tree->left);
-	int rightHeight = binary_tree_height(tree->right);
+	leftHeight = binary_tree_height(tree->left);
+	rightHeight = binary_tree_height(tree->right);
 
 	return (1 + maxValue(leftHeight, rightHeight));
 }
@@ -45,11 +47,13 @@ size_t binary_tree_height(const binary_tree_t *tree)
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
+	int leftHeight, rightHeight;
+
 	if (tree == NULL)
 		return (0);
 
-	int leftHeight = binary_tree_height(tree->left);
-	int rightHeight = binary_tree_height(tree->right);
+	leftHeight = binary_tree_height(tree->left);
+	rightHeight = binary_tree_height(tree->right);
 
 	return (leftHeight - rightHeight);
 }
