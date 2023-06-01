@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * max - Returns the maximum of two numbers
+ * maxValue - Returns the maximum of two numbers
  * @n1: first number
  * @n2: second number
  *
