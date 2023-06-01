@@ -7,6 +7,7 @@
  *
  * Return: The maximum number
  */
+
 int maxValue(int n1, int n2)
 {
 	if (n1 >= n2)
@@ -25,6 +26,7 @@ int maxValue(int n1, int n2)
  *
  * Return: The height of the tree
  */
+
 size_t binary_tree_height(const binary_tree_t *tree)
 {
 	int leftHeight, rightHeight;
